@@ -1,53 +1,198 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-@charset "utf-8";
+body {
+  font-family: 'Khula', sans-serif;
+}
 
+nav {
+  background-color: #FFFFFF;
+}
 
+.navbar-brand {
+  color: #1a1a1a;
+  text-transform: uppercase;
+  font-weight: 800;
+}
 
-// Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+.navbar-nav a {
+  color: #1a1a1a;
+  text-transform: uppercase;
 }
 
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Khula', serif;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+.center-block {
+  float: none;
+}
+
+.container-fluid{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#splash {
+  margin-top: 50px;
+}
+
+.greeting {
+  min-height:500px;
+  text-align: center;
+}
+
+.greeting:before {
+ content: '';
+  display: inline-block;
+  min-height: 500px;
+  height: 100%;
+  vertical-align: middle;
+  font-size: 0px; 
+}
+
+.hello-text {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: rgb(77, 203, 172);
+  background-color: rgba(77, 203, 172, .5);
+  color: #333333;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#hi {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+#hi2 {
+  font-size: 36px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#what-i-do {
+  background-color:#eef6f0;
+}
+
+#what-i-do p {
+  font-size: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.skill-image {
+  max-width: 90%;
+  position: relative;
+  left: 5%;
+  border: 15px solid #fff;
+}
+
+.skill-image-first {
+  max-width: 90%;
+  position: relative;
+  left: 5%;
+  border: 15px solid #FFF;
+}
+
+#portfolio {
+
+}
+
+.portfolio-item {
+  height: 300px;
+  overflow: hidden;
+  overflow-x: hidden;
+  border: 10px solid #eef6f0;
+  margin-bottom: 20px;
+}
+
+/* make this a hover effect later?? */
+.portfolio-caption{
+
+}
+
+/* figure out how to add actual javascript if/else */
+.wide-resize{
+  height: 100%;
+}
+
+.tall-resize {
+  width: 100%;
+}
+
+.img-caption{
+position: absolute;
+bottom: 0;
+}
+
+#about-me {
+  background-color:#e6e6e6;
+}
+
+#about-me img {
+  max-width: 90%;
+  max-height: 250px;
+  border: solid;
+  border-width: 10px;
+  border-color: #FFF;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#selfie {
+  padding-top:15px;
+  padding-bottom:15px;
+  display: inline-block;
+  float: right;
+}
+
+/*
+#selfie:before {
+  content:"";
+  vertical-align: middle;
+  display: inline-block;
+  font: 0px;
+}
+*/
+
+#about-me-text {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: justify;
+}
+
+#connect {
+  margin: auto;
+}
+
+/* unused */
+.contact-form {
+  max-width: 400px;
+  padding-top: 15px;
+}
+
+#social-media {
+  background-color: #FFFFFF;
+}
+
+.sm-button{
+  display: inline-block;
+  padding-bottom: 20px;
+}
+.sm-button img{
+  margin-left: auto;
+  margin-right: auto;
+}
+#footer {
+  background-color: #e6e6e6;
+}
