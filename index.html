@@ -1,23 +1,182 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Personal Portfolio  [FCC]</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 
-<div class="home">
+        <link rel="stylesheet" href="css/style.css">
 
-  <h1 class="page-heading">Posts</h1>
+    
+    
+    
+  </head>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <body>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <link href='https://fonts.googleapis.com/css?family=Khula:400,800' rel='stylesheet' type='text/css'>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<!--- nav bar -->
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuNav">
+        <span class="glyphicon glyphicon-plus"></span>
+      </button>
+      <a class="navbar-brand">Sami Lugar</a>
+    </div>
+    <div class="collapse navbar-collapse" id="menuNav">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#what-i-do" class="navLink">What I Do</a></li>
+        <li><a href="#portfolio" class="navLink">My Work</a></li>
+        <li><a href="#about-me" class="navLink">About me</a></li>
+        <li><a href="#connect" class="navLink">Connect</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
+<!-- jumbotron/slider/welcome/splash --->
+<div class="container-fluid text-center" id="splash">
+  <div class="greeting">
+    <div class="hello-text">
+      <h1 id="hi">Hi, I'm Sami</h1>
+      <p id="hi2">and I make stuff</p>
+    </div>
+  </div>
 </div>
+
+<!-- js test -->
+<p id="test"></p>
+
+<!----What i do ----->
+<div class="container-fluid text-center" id="what-i-do">
+  <h1>What I do</h1>
+  <div class="row">
+    <div class="col-sm-9 col-md-9 center-block">
+      <div class="col-sm-4 col-md-4">
+        <img class="img-responsive img-circle skill-image-first" src="http://girlandtempest.com/wp-content/uploads/2016/06/web-designer-unsplash-sq.jpg">
+        <p> Web Design</p>
+      </div>
+      <div class="col-sm-4 col-md-4">
+        <img class="img-responsive img-circle skill-image" src="http://i2.wp.com/girlandtempest.com/wp-content/uploads/2016/06/Computer-code-sq-2.jpg">
+        <p>Web Development</p>
+      </div>
+      <div class="col-sm-4 col-md-4">
+        <img class="img-responsive img-circle skill-image" src="http://girlandtempest.com/wp-content/uploads/2016/06/blue_dress_sq-1.jpg">
+        <p>Illustration</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio 3x2 --->
+<div class="container-fluid text-center" id="portfolio">
+  <h1>My Recent Work</h1>
+  <div class="row">
+    <div class="col-sm-9 col-md-9 center-block">
+      <div class="col-sm-6 col-md-6">
+        <div class="portfolio-item">
+          <img class="portfolio-image wide-resize" src="http://i1.wp.com/girlandtempest.com/wp-content/uploads/2016/03/leaves-flat-4.png">
+        </div>
+        <div class="portfolio-caption">
+          <h6>Leaves</h6>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <div class="portfolio-item">
+          <img class="portfolio-image tall-resize" src="http://img00.deviantart.net/1597/i/2016/134/0/a/planet_kid_by_thelovelesskiwi-da1tsvp.jpg">
+        </div>
+        <div class="portfolio-caption">
+          <h6>Portrait of PJ Liguori</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-9 col-md-9 center-block">
+      <div class="col-sm-6 col-md-6">
+        <div class="portfolio-item">
+          <img class=" portfolio-image wide-resize" src="http://girlandtempest.com/wp-content/uploads/2016/05/ca-coast.jpg">
+        </div>
+        <div class="portfolio-caption">
+          <h6>Pfeiffer State Park</h6>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <div class="portfolio-item">
+          <img class="portfolio-image wide-resize" src="http://girlandtempest.com/wp-content/uploads/2016/06/Audre-Screenshot.jpg">
+        </div>
+        <div class="portfolio-caption">
+          <h6>Audre Lorde Tribute Page</h6>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- About me Paragraph --->
+<div class="container-fluid" id="about-me">
+  <div class="row">
+    <div class="col-md-9 col-sm-12 center-block">
+       <div class="col-md-6 col-sm-8 col-sm-offset-2 col-md-offset-0" id="about-me-text">
+        <h1 class="text-center">About me</h1>
+        <p> I'm a 27-year-old creator from central Florida. Officially, I've studied Finance, Painting, Economics, Graphic Design, Business Taxation, and a bit of Computer Science.</p>
+        <p>I've decided to start using my skills for creation, rather than dissemination. I am enlivened by developing systems, problem-solving, and designing something that is both beautiful and practical.
+        <p>At the end of the day, I just like making stuff.</p>
+      </div>
+      <div class="col-md-6 col-sm-12" id="selfie">
+        <img class="img-circle" src="http://girlandtempest.com/wp-content/uploads/2016/06/selfie.jpg" alt="selfie">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- contact me area w/ form and SM links --->
+<div class="container-fluid" id="connect">
+  <div class="row text-center">
+    <div class="col-md-9 col-sm-6 center-block">
+      <h1>connect with me</h1>
+      <div class="sm-button col-md-3 col-sm-6">
+        <a href="https://www.youtube.com/channel/UCYvlxm-99Sxg6njVjt8NKOg">
+          <img class="img-responsive" src="http://girlandtempest.com/wp-content/uploads/2016/06/youtube-1.png">
+        </a>
+      </div>
+      <div class="sm-button col-md-3 col-sm-6">
+        <a href="https://www.pinterest.com/misssami/">
+          <img class="img-responsive" src="http://girlandtempest.com/wp-content/uploads/2016/06/pinterest-1.png">
+        </a>
+      </div>
+      <div class="sm-button col-md-3 col-sm-6">
+        <a href="http://codepen.io/samilugar/">
+          <img class="img-responsive" src="http://girlandtempest.com/wp-content/uploads/2016/06/codepen-1.png">
+        </a>
+      </div>
+      <div class="sm-button col-md-3 col-sm-6">
+        <a href="https://github.com/SamiLugar">
+          <img class="img-responsive" src="http://girlandtempest.com/wp-content/uploads/2016/06/github-1.png">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- footer with copyright? --->
+<div class="container-fluid text-center" id="footer">
+  <p>Created with Bootstrap with social media icons from <a href="www.goodstuffnononsense.com">Good Stuff No Nonsense</a> &copy; 2016 </p>
+</div>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
